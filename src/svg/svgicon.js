@@ -12,6 +12,8 @@ import { ReactComponent as BadSVG } from "./bad.svg";
 import { ReactComponent as ChatbotSVG } from "./chatbot.svg";
 import { ReactComponent as LightningSVG } from "./lightning.svg";
 import { ReactComponent as DownSVG } from "./down.svg";
+import { ReactComponent as RefreshSVG } from "./refresh.svg";
+
 
 import UserIconWEBP from './usericon.webp';
 
@@ -89,6 +91,11 @@ export function DownIcon(){
   return (
     <DownSVG />
   );
+}
+export function RefreshIcon(){
+  return (
+    <RefreshSVG />
+  )
 }
 export function UserIcon(props) {
   return (
