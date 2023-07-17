@@ -85,7 +85,6 @@ export function LightningIcon(){
     <LightningSVG />
   );
 }
-
 export function DownIcon(){
   return (
     <DownSVG />

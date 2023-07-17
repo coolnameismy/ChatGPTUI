@@ -1,12 +1,14 @@
-import { SendIcon } from '../svg/svgicon'
+import { GoodIcon,BadIcon,ChatbotIcon } from '../svg/svgicon'
+
+// GoodIcon,BadIcon,ChatbotIcon
 
 export default function ChatCellView() {
     return (
-        <div className="group w-full text-gray-800 dark:text-gray-100 border-b border-black/10 dark:border-gray-900/50 bg-gray-50 dark:bg-[#444654]">
+        <div className="chat_cell group w-full text-gray-800 dark:text-gray-100 border-b border-black/10 dark:border-gray-900/50 bg-gray-50 dark:bg-[#444654]">
             <div className="flex p-4 gap-4 text-base md:gap-6 md:max-w-2xl lg:max-w-[38rem] xl:max-w-3xl md:py-6 lg:px-0 m-auto">
                 <div className="flex-shrink-0 flex flex-col relative items-end">
                     <div className="w-[30px]">
-                        <div className="relative p-1 rounded-sm h-[30px] w-[30px] text-white flex items-center justify-center" style="background-color: rgb(25, 195, 125);">
+                        <div className="relative p-1 rounded-sm h-[30px] w-[30px] text-white flex items-center justify-center" style={{backgroundColor: "rgb(25, 195, 125)"}}>
                             <ChatbotIcon />
                         </div>
                     </div>

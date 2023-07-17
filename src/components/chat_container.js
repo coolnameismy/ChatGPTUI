@@ -1,6 +1,7 @@
 
 import ModelSelector from './model_selector'
 import ChatTextview from './chat_textview'
+import ChatListView from './chat_list'
 
 export default function ChatContainer() {
     return (
@@ -14,7 +15,7 @@ export default function ChatContainer() {
                             </div>
                         </div>
                     </div>
-                    {/* <ChatListView /> */}
+                    <ChatListView />
                     <ChatTextview />
                 </main>
             </div>
