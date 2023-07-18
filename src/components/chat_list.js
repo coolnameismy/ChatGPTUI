@@ -1,7 +1,7 @@
 import { LightningIcon, DownIcon} from '../svg/svgicon'
-import ChatCellView from './chat_cell'
+import ChatCell from './chat_cell'
 
-export default function ChatListView() {
+export default function ChatList() {
     return (
         <div className="chat_list flex-1 overflow-hidden">
             <div className="react-scroll-to-bottom--css-hejsg-79elbk h-full dark:bg-gray-800">
@@ -13,24 +13,24 @@ export default function ChatListView() {
                                 <span>Model: Default (GPT-3.5)</span>
                             </div>
                         </header>
-                        <ChatCellView role="user"/>
-                        <ChatCellView />
-                        <ChatCellView role="user"/>
-                        <ChatCellView />
-                        <ChatCellView role="user"/>
-                        <ChatCellView />
-                        <ChatCellView role="user"/>
-                        <ChatCellView />
-                        <ChatCellView role="user"/>
-                        <ChatCellView />
-                        <ChatCellView role="user"/>
-                        <ChatCellView />
-                        <ChatCellView role="user"/>
-                        <ChatCellView />
-                        <ChatCellView role="user"/>
-                        <ChatCellView />
-                        <ChatCellView role="user"/>
-                        <ChatCellView />
+                        <ChatCell role="user"/>
+                        <ChatCell />
+                        <ChatCell role="user"/>
+                        <ChatCell />
+                        <ChatCell role="user"/>
+                        <ChatCell />
+                        <ChatCell role="user"/>
+                        <ChatCell />
+                        <ChatCell role="user"/>
+                        <ChatCell />
+                        <ChatCell role="user"/>
+                        <ChatCell />
+                        <ChatCell role="user"/>
+                        <ChatCell />
+                        <ChatCell role="user"/>
+                        <ChatCell />
+                        <ChatCell role="user"/>
+                        <ChatCell />
                     </div>
                     <button className="cursor-pointer absolute right-6 bottom-[124px] md:bottom-[120px] z-10 rounded-full border border-gray-200 bg-gray-50 text-gray-600 dark:border-white/10 dark:bg-white/10 dark:text-gray-200">
                         <DownIcon />

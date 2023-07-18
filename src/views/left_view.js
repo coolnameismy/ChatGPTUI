@@ -1,5 +1,5 @@
 import UserPanel from '../components/user_panel'
-import AddChatPanel from '../components/addchat_panel';
+import AddChatPanel from '../components/add_chat_panel';
 import ChatHistoryListPanel from '../components/chat_history_list';
 
 function LeftView() {

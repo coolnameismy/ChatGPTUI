@@ -2,7 +2,7 @@ import { GoodIcon,BadIcon,ChatbotIcon } from '../svg/svgicon'
 import classNames from 'classnames'
 // GoodIcon,BadIcon,ChatbotIcon
 
-export default function ChatCellView(props) {
+export default function ChatCell(props) {
     const { role = "bot" } = props
     // console.log(">>> role",role)
     let chat_cell_styles = classNames({
