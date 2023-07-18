@@ -49,11 +49,11 @@ const style4 = {
     border: "none",
     margin: "auto",
     display: "block",
-    width: "0px",
-    height: "0px",
-    minWidth: "100%",
+    width: "28px",
+    height: "28px",
+    // minWidth: "100%",
     maxWidth: "100%",
-    minHeight: "100%",
+    // minHeight: "100%",
     maxHeight: "100%"
   };
 
