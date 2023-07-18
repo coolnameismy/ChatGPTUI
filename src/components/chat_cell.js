@@ -1,10 +1,24 @@
 import { GoodIcon,BadIcon,ChatbotIcon } from '../svg/svgicon'
-
+import classNames from 'classnames'
 // GoodIcon,BadIcon,ChatbotIcon
 
-export default function ChatCellView() {
+export default function ChatCellView(props) {
+    const { role = "bot" } = props
+    // console.log(">>> role",role)
+    let chat_cell_styles = classNames({
+        "chat_cell":true,
+        "group":true,
+        "w-full":true,
+        "text-gray-800 ":true,
+        "dark:text-gray-100 ":true,
+        "border-b ":true,
+        "border-black/10 ":true,
+        "bg-gray-50 ":true,
+        "dark:border-gray-900/50 ": role === "bot" ,
+    })
+    chat_cell_styles += role === "bot" ? "dark:bg-dark3" : "dark:bg-dark2";
     return (
-        <div className="chat_cell group w-full text-gray-800 dark:text-gray-100 border-b border-black/10 dark:border-gray-900/50 bg-gray-50 dark:bg-[#444654]">
+        <div className={chat_cell_styles}>
             <div className="flex p-4 gap-4 text-base md:gap-6 md:max-w-2xl lg:max-w-[38rem] xl:max-w-3xl md:py-6 lg:px-0 m-auto">
                 <div className="flex-shrink-0 flex flex-col relative items-end">
                     <div className="w-[30px]">
