@@ -8,7 +8,8 @@ module.exports = {
       colors: {
         'dark1': '#202123',
         'dark2': '#343541', //.bg-gray-800
-        'dark3': '#444654'
+        'dark3': '#444654',
+        'activegreen':"#19C37D"
       },
     },
   },

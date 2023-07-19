@@ -85,7 +85,14 @@ function initAction(model,setModel){
         setModel(newm)
     }
 
-    Object.assign(model,{activeChat,newchat,setModelByChatId,setThemeByChatId,sendMessage,respMessage})
+    const canSelectModel = () => {
+        if(!model || !model.chats) return false
+        const currChat = model.chats[model.currIndex];
+        if(currChat && currChat.messages && currChat.messages.length > 0) return false
+        return true
+    }
+
+    Object.assign(model,{activeChat,newchat,setModelByChatId,setThemeByChatId,sendMessage,respMessage,canSelectModel})
 }
 
 

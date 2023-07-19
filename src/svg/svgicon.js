@@ -16,6 +16,7 @@ import { ReactComponent as RefreshSVG } from "./refresh.svg";
 
 
 import UserIconWEBP from './usericon.webp';
+import { act } from "react-dom/test-utils";
 
 export function HideShowIcon() {
   return (
@@ -36,15 +37,17 @@ export function ChatIcon() {
   );
 }
 
-export function GPT35Icon() {
+export function GPT35Icon({active}) {
+  const style = active ? {color:"#19C37D"} : {}
   return (
-    <GPT35SVG />
+    <GPT35SVG style={style}/>
   );
 }
 
-export function GPT40Icon() {
+export function GPT40Icon({active}) {
+  const style = active ? {color:"#19C37D"} : {}
   return (
-    <GPT40SVG />
+    <GPT40SVG style={style}/>
   );
 }
 

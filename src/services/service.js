@@ -32,6 +32,7 @@ function req(ret){
 }
 
 const mockChatList = [
+    {id:'0',theme:'empty',model:'GPT-3.5',messages:[]},
     {id:'1',theme:'weather',model:'GPT-3.5',messages:[{user:"It's nice outside today."}]},
     {id:'2',theme:'dinner plans',model:'GPT-4.0',messages:[{user:"What should I cook tonight?"},{assistant:"How about pizza?"}]},
     {id:'3',theme:'homework help',model:'GPT-3.5',messages:[{user:"Math problem 5 is tough."},{assistant:"Do you want a hint?"}]},
