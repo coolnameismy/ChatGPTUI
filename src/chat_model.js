@@ -1,6 +1,7 @@
 import { fetchChatList, fetchCurrIndex, fetchUserInfo } from "./services/service";
 import React, { useContext, useEffect, useState } from 'react';
-async function init() {
+
+async function initData() {
     return new Promise(async (resolve,reject) => {
         const { data:chatResp } = await fetchChatList();
         const userInforesp = await fetchUserInfo();
@@ -11,16 +12,34 @@ async function init() {
         })
     })
 }
+
+function initAction(model,setModel){
+
+    // 设置当前chat
+    const activeChat = (chatId) => {
+        const newm = {
+            ...model,
+            currIndex:chatId
+        }
+        setModel(newm);
+    }
+
+
+    Object.assign(model,{activeChat})
+}
+
+
 export default function useChatModelState() {
     const [model,setModel] = useState({});
     useEffect(()=> {
-      const initData = async () => {
-        const chatdata = await init();
+      (async () => {
+        const chatdata = await initData();
         setModel(chatdata);
-      } 
-      initData()
+      })()
     },[])
     window.model = model;
+    // 绑定model action
+    initAction(model,setModel)
     return [model,setModel];
 }
 
