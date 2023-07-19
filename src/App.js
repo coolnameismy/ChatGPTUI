@@ -1,7 +1,7 @@
 import './App.css';
 import LeftView from './views/left_view'
 import MainView from './views/main_view'
-import useChatModelState,{ChatModelContext} from './chat_model';
+import useChatModelState,{ChatModelContext} from './model/chat_model';
 import React, { Provider, useEffect, useState } from 'react';
 
 
