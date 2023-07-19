@@ -8,7 +8,7 @@ export default function ChatHistoryListPanel() {
     const model = useContext(ChatModelContext);
     function render_chatlist() {
         let {chats = [],currIndex} = model;
-        chats = chats.reverse();
+        chats.sort((a,b)=>b.id-a.id)
         return chats.map((chat) => {
             let classn = classNames("flex py-3 px-3 items-center gap-3 relative rounded-md hover:bg-[#2A2B32] cursor-pointer break-all )} )} hover:pr-4 group",{
                 "bg-dark2":chat.id === currIndex,

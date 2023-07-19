@@ -24,12 +24,12 @@ function initAction(model,setModel){
         setModel(newm);
     }
     // add new chat
-    const newchat = (theme = "new chat", model = "GPT-3.5") => {
+    const newchat = (theme = "new chat", modelname = "GPT-3.5") => {
         // {id:'1',theme:'weather',model:'GPT-3.5',messages:[{user:"It's nice outside today."}]},
         const id = model.chats.length;
         const messages = [];
         model.chats.push({
-            id,theme,model,messages
+            id,theme,model:modelname,messages
         })
         const newm = {
             ...model
