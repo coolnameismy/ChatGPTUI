@@ -1,6 +1,8 @@
 import UserPanel from '../components/user_panel'
 import AddChatPanel from '../components/add_chat_panel';
 import ChatHistoryListPanel from '../components/chat_history_list';
+import { ChatModelContext } from '../chat_model';
+import { useContext } from 'react';
 
 function LeftView() {
     return (
