@@ -87,7 +87,14 @@ function initAction(model,setModel){
 
     const canSelectModel = () => {
         if(!model || !model.chats) return false
-        const currChat = model.chats[model.currIndex];
+        const {chats,currIndex} = model;
+        let currChat = {};
+        for(let i = 0; i < chats.length; i++){
+            if(chats[i].id == currIndex) {
+                currChat = chats[i]
+                break;
+            }
+        }
         if(currChat && currChat.messages && currChat.messages.length > 0) return false
         return true
     }
