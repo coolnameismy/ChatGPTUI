@@ -1,10 +1,14 @@
-import { GoodIcon,BadIcon,ChatbotIcon } from '../svg/svgicon'
+import { GoodIcon,BadIcon,ChatbotIcon, UserIcon } from '../svg/svgicon'
 import classNames from 'classnames'
 // GoodIcon,BadIcon,ChatbotIcon
 
-export default function ChatCell(props) {
-    const { role = "bot" } = props
+
+// messages:[{user:"I'm bored."},{assistant:"You can watch a comedy movie."}]},
+
+export default function ChatCell({user,assistant}) {
+    const role = user !== undefined ? "user" : "assistant"
     // console.log(">>> role",role)
+    const text = user !== undefined ? user : assistant
     let chat_cell_styles = classNames({
         "chat_cell":true,
         "group":true,
@@ -14,16 +18,18 @@ export default function ChatCell(props) {
         "border-b ":true,
         "border-black/10 ":true,
         "bg-gray-50 ":true,
-        "dark:border-gray-900/50 ": role === "bot" ,
+        "dark:border-gray-900/50 ": role === "assistant" ,
     })
-    chat_cell_styles += role === "bot" ? "dark:bg-dark3" : "dark:bg-dark2";
+    const ChatbotIconStyle = {backgroundColor: "rgb(25, 195, 125)"}
+    const UserIconStyle = {padding: "0px"}
+    chat_cell_styles += role === "assistant" ? "dark:bg-dark3" : "dark:bg-dark2";
     return (
         <div className={chat_cell_styles}>
             <div className="flex p-4 gap-4 text-base md:gap-6 md:max-w-2xl lg:max-w-[38rem] xl:max-w-3xl md:py-6 lg:px-0 m-auto">
                 <div className="flex-shrink-0 flex flex-col relative items-end">
                     <div className="w-[30px]">
-                        <div className="relative p-1 rounded-sm h-[30px] w-[30px] text-white flex items-center justify-center" style={{backgroundColor: "rgb(25, 195, 125)"}}>
-                            <ChatbotIcon />
+                        <div className="relative p-1 rounded-sm h-[30px] w-[30px] text-white flex items-center justify-center" style={role==='assistant' ? ChatbotIconStyle : UserIconStyle}>
+                            {role === "assistant" ? <ChatbotIcon /> : <UserIcon />}
                         </div>
                     </div>
                 </div>
@@ -31,7 +37,7 @@ export default function ChatCell(props) {
                     <div className="flex flex-grow flex-col gap-3">
                         <div className="min-h-[20px] flex items-start overflow-x-auto whitespace-pre-wrap break-words flex-col gap-4">
                             <div className="markdown prose w-full break-words dark:prose-invert dark">
-                                <p>Sure! Here you go:</p>
+                                <p>{text}</p>
                             </div>
                         </div>
                     </div>

@@ -13,6 +13,18 @@ async function initData() {
     })
 }
 
+
+function findChatById(model,id){
+    if(!id) return null;
+    const chats =  model.chats || [];
+    for(let i = 0; i < chats.length; i++){
+        if(chats[i].id === id) {
+            return chats[i];
+        }
+    }
+    return null;
+}
+
 function initAction(model,setModel){
 
     // set current chat
@@ -41,7 +53,7 @@ function initAction(model,setModel){
         if(!id) return;
         const { chats = [] } = model;
         for(let i = 0; i < chats.length; i++){
-            if(chats[i].id == id) {
+            if(chats[i].id === id) {
                 chats[i].model = modelName;
             }
         }
@@ -53,7 +65,7 @@ function initAction(model,setModel){
         if(!id) return;
         const { chats = [] } = model;
         for(let i = 0; i < chats.length; i++){
-            if(chats[i].id == id) {
+            if(chats[i].id === id) {
                 chats[i].theme = theme;
             }
         }
@@ -66,7 +78,7 @@ function initAction(model,setModel){
         if(text.trim() === "") return;
         const { chats = [] } = model;
         for(let i = 0; i < chats.length; i++){
-            if(chats[i].id == id) {
+            if(chats[i].id === id) {
                 chats[i].messages.push({user:text});
             }
         }
@@ -77,7 +89,7 @@ function initAction(model,setModel){
         if(!id) return;
         const { chats = [] } = model;
         for(let i = 0; i < chats.length; i++){
-            if(chats[i].id == id) {
+            if(chats[i].id === id) {
                 chats[i].messages.push({bot:text});
             }
         }
@@ -85,21 +97,26 @@ function initAction(model,setModel){
         setModel(newm)
     }
 
-    const canSelectModel = () => {
+    const isChatting = () => {
         if(!model || !model.chats) return false
         const {chats,currIndex} = model;
-        let currChat = {};
+        let currChat;
         for(let i = 0; i < chats.length; i++){
-            if(chats[i].id == currIndex) {
+            if(chats[i].id === currIndex) {
                 currChat = chats[i]
                 break;
             }
         }
-        if(currChat && currChat.messages && currChat.messages.length > 0) return false
-        return true
+        if(currChat && currChat.messages && currChat.messages.length > 0) return true
+        return false
     }
 
-    Object.assign(model,{activeChat,newchat,setModelByChatId,setThemeByChatId,sendMessage,respMessage,canSelectModel})
+    const findCurrChat = () => {
+        const currChat = findChatById(model,model.currIndex);
+        return currChat;
+    }
+
+    Object.assign(model,{activeChat,newchat,setModelByChatId,setThemeByChatId,sendMessage,respMessage,isChatting,findCurrChat})
 }
 
 

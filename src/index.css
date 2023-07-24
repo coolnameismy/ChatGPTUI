@@ -22,3 +22,30 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+.btn {
+  align-items: center;
+  border-color: transparent;
+  border-radius: 0.25rem;
+  border-width: 1px;
+  display: inline-flex;
+  font-size: .875rem;
+  line-height: 1.25rem;
+  padding: 0.5rem 0.75rem;
+  padding-top: 0.5rem;
+  padding-right: 0.75rem;
+  padding-bottom: 0.5rem;
+  padding-left: 0.75rem;
+  pointer-events: auto;
+}
+
+.btn-neutral {
+  --tw-border-opacity: 1;
+  --tw-bg-opacity: 1;
+  --tw-text-opacity: 1;
+  background-color: rgba(52,53,65,var(--tw-bg-opacity));
+  border-color: rgba(86,88,105,var(--tw-border-opacity));
+  color: rgba(217,217,227,var(--tw-text-opacity));
+  border-width: 1px !important;
+}

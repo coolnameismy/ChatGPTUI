@@ -9,9 +9,7 @@ export default function ModelSelector() {
     if(model && model.chats && model.currIndex && model.chats[model.currIndex]){
         currModel = model.chats[model.currIndex].model
     }
-    const isshow = model.canSelectModel()
-    console.log('isshow',isshow)
-    
+    const isshow = !model.isChatting()
     const currStyle = "group/button  dark:bg-dark3 relative flex w-full items-center justify-center gap-1 rounded-lg border py-3 outline-none transition-opacity duration-100 sm:w-auto sm:min-w-[148px] md:gap-2 md:py-2.5 border-black/10 bg-white text-gray-900 shadow-[0_1px_7px_0px_rgba(0,0,0,0.06)] hover:!opacity-100 dark:border-[#4E4F60] dark:text-gray-100";
     const normalStyle = "group/button relative flex w-full items-center justify-center gap-1 rounded-lg border py-3 outline-none transition-opacity duration-100 sm:w-auto sm:min-w-[148px] md:gap-2 md:py-2.5 border-transparent text-gray-500 hover:text-gray-800 hover:dark:text-gray-100";
     const calStyle = (modelName)=> currModel === modelName ? currStyle : normalStyle;
