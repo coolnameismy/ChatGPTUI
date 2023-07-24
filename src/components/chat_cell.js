@@ -41,20 +41,23 @@ export default function ChatCell({user,assistant}) {
                             </div>
                         </div>
                     </div>
-                    <div className="flex justify-between lg:block">
-                        <div
-                            className="text-gray-400 flex self-end lg:self-center justify-center mt-2 gap-2 md:gap-3 lg:gap-1 lg:absolute lg:top-0 lg:translate-x-full lg:right-0 lg:mt-0 lg:pl-2 visible">
-                            <div className="flex gap-1">
-                                <button className="p-1 rounded-md hover:bg-gray-100 hover:text-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-200 disabled:dark:hover:text-gray-400">
-                                    <GoodIcon />
-                                </button>
-                                <button
-                                    className="p-1 rounded-md hover:bg-gray-100 hover:text-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-200 disabled:dark:hover:text-gray-400">
-                                    <BadIcon />
-                                </button>
+                    { role === "assistant" && (
+                        <div className="flex justify-between lg:block">
+                            <div
+                                className="text-gray-400 flex self-end lg:self-center justify-center mt-2 gap-2 md:gap-3 lg:gap-1 lg:absolute lg:top-0 lg:translate-x-full lg:right-0 lg:mt-0 lg:pl-2 visible">
+                                <div className="flex gap-1">
+                                    <button className="p-1 rounded-md hover:bg-gray-100 hover:text-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-200 disabled:dark:hover:text-gray-400">
+                                        <GoodIcon />
+                                    </button>
+                                    <button
+                                        className="p-1 rounded-md hover:bg-gray-100 hover:text-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-200 disabled:dark:hover:text-gray-400">
+                                        <BadIcon />
+                                    </button>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    )}
+                    
                 </div>
             </div>
         </div>

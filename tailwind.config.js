@@ -9,7 +9,7 @@ module.exports = {
         'dark1': '#202123',
         'dark2': '#343541', //.bg-gray-800
         'dark3': '#444654',
-        'activegreen':"#19C37D"
+        'activegreen':"#19C37D" //bg-green-500 rgb(25, 195, 125)
       },
     },
   },
