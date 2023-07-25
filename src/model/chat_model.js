@@ -40,11 +40,13 @@ function initAction(model,setModel){
         // {id:'1',theme:'weather',model:'GPT-3.5',messages:[{user:"It's nice outside today."}]},
         const id = model.chats.length;
         const messages = [];
+        const currIndex = id;
         model.chats.push({
             id,theme,model:modelname,messages
         })
         const newm = {
-            ...model
+            ...model,
+            currIndex
         }
         setModel(newm);
     }
