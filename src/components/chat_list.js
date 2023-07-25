@@ -22,7 +22,7 @@ export default function ChatList() {
                         <header className="sticky top-0 z-[9] w-full translate-y-2" data-projection-id="117" style={{top: "-50px",transform: "translateY(-2%)"}}>
                             <div className="relative z-20 flex flex-wrap items-center justify-center gap-1 border-b border-black/10 bg-gray-50 p-3 text-gray-500 dark:border-gray-900/50 dark:bg-dark3 dark:text-gray-300">
                                 <LightningIcon />
-                                <span>Model: Default (GPT-3.5)</span>
+                                <span>Model: Default ({chat.model})</span>
                             </div>
                         </header>
                         {renderChatCell()}

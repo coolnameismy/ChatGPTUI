@@ -49,11 +49,10 @@ function initAction(model,setModel){
         setModel(newm);
     }
 
-    const setModelByChatId = (id,modelName = "GPT-3.5") => {
-        if(!id) return;
-        const { chats = [] } = model;
+    const setModelByChatId = (modelName = "GPT-3.5") => {
+        const {currIndex,chats} = model;
         for(let i = 0; i < chats.length; i++){
-            if(chats[i].id === id) {
+            if(chats[i].id === currIndex) {
                 chats[i].model = modelName;
             }
         }
