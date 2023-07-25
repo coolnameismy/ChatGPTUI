@@ -17,7 +17,7 @@ export async function fetchChatList(){
         code:200,
         data:{
           chats:mockChatList,
-          currIndex:3
+          currIndex:mockChatList[Math.floor(Math.random()*mockChatList.length)].id
         }
     }
     return await req(resp);
