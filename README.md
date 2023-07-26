@@ -1,80 +1,60 @@
-# Getting Started with Create React App
+## ChatGPTUI ✨
+ChatGPTUI is an open-source pure frontend application that faithfully recreates the appearance, interaction, and user interface of ChatGPT. 🚀
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Project Description 📝
+ChatGPTUI aims to be approximately 95% faithful to the original ChatGPT, providing users with an immersive and familiar experience. 🌈
 
-## Available Scripts
+![Alt Text](./livedemo/livedemo.gif)
 
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+🔗[livedemo](./livedemo/index.html) 
 
 
-<!-- todo: -->
-done message render 
-done model select action
-3) input data req and resp
-4) chat history style fixed
-5) open and close 
-6) history delete 
-7) history rename
+### Features
+ChatGPTUI comes with the following features:
+
+🚀 Conversation history
+💬 User information
+🎉 Model selection
+💎 User input and GPT responses
+🚦 Start a new conversation
+
+### Installation Steps
+To run ChatGPTUI locally, follow these steps:
+
+```bash
+# Clone the repository
+git clone https://github.com/coolnameismy/ChatGPTUI.git
+
+# Navigate to the project directory
+cd ChatGPTUI
+
+# Install the dependencies
+npm install // or yarn add
+
+# Start the application
+npm start // or yarn start
+```
+Open [http://localhost:3000](http://localhost:3000) in your browser to view
+🎉 Enjoy the ChatGPT-like experience with ChatGPTUI!
+
+### License 📜
+ChatGPTUI is released under the MIT License. See the LICENSE file for details.
+
+#### Business Cooperation 🤝
+For business collaborations, we offer GPT private client solutions and private knowledge base project development services. For inquiries and further discussions, please feel free to contact us via email at coolnameismy@gamil.com. 📧
+
+### Acknowledgments 🙏
+A big thank you to all the contributors who made ChatGPTUI possible. Your efforts are greatly appreciated! 👏
+
+### Contact 📞
+Feel free to contact us with any questions or feedback. You can reach us at coolnameismy@gamil.com. 📧
+
+### Contributing 🤝
+We welcome contributions to enhance ChatGPTUI! If you wish to contribute, please follow our contribution guidelines.
+
+#### Additional Information 🌟
+We have exciting plans for the future! In addition to ChatGPTUI, we are actively working on developing more open-source libraries and tools related to OpenAI and language models (LLM). Stay tuned for our upcoming projects, as we continue to explore innovative ways to leverage cutting-edge AI technologies for the benefit of the community.
+
+Your support and interest in our initiatives are greatly appreciated. By following our progress and staying engaged, you can be among the first to experience the latest advancements in the world of AI and language modeling.
+
+Thank you for being a part of our journey! 💬🤖
