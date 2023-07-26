@@ -13,7 +13,7 @@ export default function Regenerate(){
                 <button className="btn relative btn-neutral -z-0 border-0 " as="button">
                     <div className="flex w-full gap-2 items-center justify-center">
                         <RefreshIcon />
-                        Regenerate response
+                         Regenerate response
                     </div>
                 </button>
             </div>

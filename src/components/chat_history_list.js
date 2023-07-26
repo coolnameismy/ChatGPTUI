@@ -23,7 +23,7 @@ export default function ChatHistoryListPanel() {
     }
     return (
         <div className="flex-col flex-1 transition-opacity duration-500 overflow-y-auto -mr-2">
-            <div className="flex flex-col gap-2 pb-2 text-gray-100 text-sm">
+            <div className="flex flex-col gap-2 pb-2 text-gray-100 text-sm" style={{ maxHeight: window.innerHeight - 135}}>
                 <ol className="relative">
                     {render_chatlist()}
                 </ol>

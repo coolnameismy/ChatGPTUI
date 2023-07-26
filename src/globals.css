@@ -22,3 +22,17 @@
       content-visibility: auto;
     }
   }
+
+/* Chrome, Safari */
+::-webkit-scrollbar {
+  /* width: 0 !important;
+  height: 0 !important; */
+}
+/* Firefox */
+html {
+  scrollbar-width: none;
+}
+/* IE, Edge */
+body {
+  -ms-overflow-style: none;
+}
