@@ -1,5 +1,6 @@
 ## ChatGPTUI ✨
 ChatGPTUI 是一个开源的纯前端应用，忠实地再现了 ChatGPT 的外观、交互和用户界面。🚀
+🔗[ENREADME](./README.md) 
 
 ### 项目简介 📝
 ChatGPTUI 致力于以高达 95% 的准确度还原原版 ChatGPT，为用户提供沉浸式且熟悉的体验。🌈

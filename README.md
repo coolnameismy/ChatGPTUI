@@ -1,5 +1,6 @@
 ## ChatGPTUI ✨
 ChatGPTUI is an open-source pure frontend application that faithfully recreates the appearance, interaction, and user interface of ChatGPT. 🚀
+🔗[中文README](./README_CN.md) 
 
 ### Project Description 📝
 ChatGPTUI aims to be approximately 95% faithful to the original ChatGPT, providing users with an immersive and familiar experience. 🌈
@@ -40,7 +41,7 @@ Open [http://localhost:3000](http://localhost:3000) in your browser to view
 ### License 📜
 ChatGPTUI is released under the MIT License. See the LICENSE file for details.
 
-#### Business Cooperation 🤝
+### Business Cooperation 🤝
 For business collaborations, we offer GPT private client solutions and private knowledge base project development services. For inquiries and further discussions, please feel free to contact us via email at coolnameismy@gamil.com. 📧
 
 ### Acknowledgments 🙏
@@ -52,7 +53,7 @@ Feel free to contact us with any questions or feedback. You can reach us at cool
 ### Contributing 🤝
 We welcome contributions to enhance ChatGPTUI! If you wish to contribute, please follow our contribution guidelines.
 
-#### Additional Information 🌟
+### Additional Information 🌟
 We have exciting plans for the future! In addition to ChatGPTUI, we are actively working on developing more open-source libraries and tools related to OpenAI and language models (LLM). Stay tuned for our upcoming projects, as we continue to explore innovative ways to leverage cutting-edge AI technologies for the benefit of the community.
 
 Your support and interest in our initiatives are greatly appreciated. By following our progress and staying engaged, you can be among the first to experience the latest advancements in the world of AI and language modeling.
