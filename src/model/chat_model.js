@@ -1,4 +1,4 @@
-import { fetchChatList, fetchCurrIndex, fetchUserInfo } from "../services/service";
+import { fetchChatList, fetchCurrIndex, fetchUserInfo,fetchChatResp } from "../services/service";
 import React, { useContext, useEffect, useState } from 'react';
 
 async function initData() {
@@ -74,13 +74,15 @@ function initAction(model,setModel){
         setModel(newm)
     }
 
-    const sendMessage = (id,text = "") => {
+    const sendMessage = (id,text = "",role = "user") => {
         if(!id) return;
         if(text.trim() === "") return;
         const { chats = [] } = model;
         for(let i = 0; i < chats.length; i++){
             if(chats[i].id === id) {
-                chats[i].messages.push({user:text});
+                const obj = {}
+                obj[role] = text;
+                chats[i].messages.push(obj);
             }
         }
         const newm = {...model}
@@ -117,7 +119,15 @@ function initAction(model,setModel){
         return currChat;
     }
 
-    Object.assign(model,{activeChat,newchat,setModelByChatId,setThemeByChatId,sendMessage,respMessage,isChatting,findCurrChat})
+    const ask = async (text) => {        
+        const currChat = findCurrChat();
+        sendMessage(currChat.id,text,"user");
+        if(!currChat) return;
+        const ret = await fetchChatResp();
+        sendMessage(currChat.id,ret.data,"assistant");
+    }
+
+    Object.assign(model,{activeChat,newchat,setModelByChatId,setThemeByChatId,sendMessage,respMessage,isChatting,findCurrChat,ask})
 }
 
 

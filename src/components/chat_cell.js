@@ -18,7 +18,8 @@ export default function ChatCell({user,assistant}) {
         "border-b ":true,
         "border-black/10 ":true,
         "bg-gray-50 ":true,
-        "dark:border-gray-900/50 ": role === "assistant" ,
+        "dark:border-gray-900/50 ": role === "assistant",
+        // "last:mb-180":true
     })
     const ChatbotIconStyle = {backgroundColor: "rgb(25, 195, 125)"}
     const UserIconStyle = {padding: "0px"}

@@ -14,10 +14,11 @@ export default function ChatInput() {
         setText(e.target.value)
     }
     
-    function handleSubmit(e) {
+    async function handleSubmit(e) {
         setText('')
         textareaRef.current.focus();
-        model.sendMessage(model.currIndex,text)
+        // model.sendMessage(model.currIndex,text)
+        model.ask(text)
         e.preventDefault();
     }
     function handKeyDown(e) {
